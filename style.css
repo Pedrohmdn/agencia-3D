@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --white: rgba(255, 255, 255, 0.9);
+  --white-description: rgba(255, 255, 255, 0.8);
+  --black: rgb(0, 0, 0);
+  --black-button: rgba(0, 0, 0, 0.9);
+  --font-text: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: "Clash";
+  src: url(fonts/ClashDisplay-Bold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Clash";
+  src: url(fonts/ClashDisplay-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Clash";
+  src: url(fonts/ClashDisplay-Regular.ttf);
+  font-weight: 400;
+}
+
+body {
+  font-family: var(--font-text);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+h1,
+h2 {
+  font-family: "Clash", sans-serif;
+}
+
+h2 {
+  font-size: 3.8vw;
+  font-weight: 400;
+}
+
+p {
+  color: var(--white-description);
+  font-size: clamp(1rem, 1.1vw, 1.5rem);
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  img,
+  video {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  padding: 0 clamp(1rem, 4vw, 3.75rem) 0 clamp(1rem, 4vw, 3.75rem);
+  overflow: hidden;
+  width: 100%;
+}
+
+.header {
+  margin-top: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+.transition {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero {
+  height: 100%;
+  position: relative;
+  gap: 60px;
+}
+
+.herosubtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 2.5rem;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+    border-radius: 2.5rem;
+    box-shadow:
+      -1px -2px 0 0 rgba(255, 216, 194, 0.2) inset,
+      1px 2px 0 0 rgba(255, 216, 194, 0.2) inset;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    mix-blend-mode: color-dodge;
+    color: rgb(216, 216, 216);
+  }
+
+  video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+}
+
+.content {
+  width: min(100%, 1200px);
+  gap: 48px;
+}
+
+.herotitle {
+  gap: 24px;
+  h2 {
+    text-align: center;
+    line-height: 5vw;
+  }
+
+  p {
+    width: min(100%, 800px);
+    text-align: center;
+    line-height: 160%;
+  }
+}
+
+.buttons {
+  flex-direction: row;
+  gap: 32px;
+
+  .button {
+    padding: 8px 8px 8px 20px;
+    flex-direction: row;
+    gap: 12px;
+    font-size: 1rem;
+    border-radius: 2.5rem;
+    border: none;
+    justify-content: space-between;
+    width: max-content;
+  }
+
+  .button.primary {
+    color: var(--black-button);
+    background-color: var(--white);
+  }
+
+  .button.secondary {
+    color: var(--white);
+    background-color: var(--black-button);
+    border: solid 2px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.rectangles {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  div {
+    width: 100%;
+    background-color: var(--black);
+    transform: translateY(-100%);
+    border: 1px solid var(--black);
+  }
+}
+
+.sectiontext {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  h2 {
+    font-family: var(--font-text);
+    font-size: 5.1vw;
+    font-weight: 400;
+    color: var(--white-description);
+  }
+}
+
+.projects {
+  margin-top: -1px;
+  padding-top: 4vw;
+  gap: 4vw;
+  position: relative;
+  background-color: var(--black);
+
+  .title {
+    gap: 24px;
+    text-align: center;
+  }
+}
+
+.wrapperprojects {
+  gap: 4vw;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+
+  .project {
+    width: 60%;
+    overflow: hidden;
+    border-radius: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 100vw;
+    object-fit: cover;
+    filter: saturate(0);
+  }
+}
+
+.text3d {
+  height: 100%;
+  position: relative;
+
+  h2 {
+    font-size: 12vw;
+    position: absolute;
+  }
+
+  .diamond {
+    z-index: 2;
+    position: absolute;
+  }
+}
+
+.transitionFooter {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.footer {
+  flex-direction: row;
+  align-items: end;
+  padding-bottom: 4vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  height: 100%;
+  gap: 24px;
+
+  .col1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 50%;
+
+    h2 {
+      font-size: 9vw;
+      line-height: 100%;
+    }
+
+    .politics {
+      flex-direction: row;
+      gap: 24px;
+
+      p,
+      a {
+        font-size: 0.875rem;
+        color: var(--white-description);
+      }
+    }
+  }
+
+  .col2 {
+    width: 46%;
+    align-items: end;
+    gap: 32px;
+
+    h2 {
+      font-size: 3vw;
+      text-align: end;
+    }
+  }
+}
+
+@media screen and (min-width: 1530px) {
+  .content {
+    width: min(100%, 1440px);
+  }
+  .herotitle {
+    p {
+      width: min(100%, 950px);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer .col1 .politics {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .col1 {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer .col2 {
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .buttons {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .content {
+    gap: 40px;
+  }
+
+  .col1 p {
+    text-align: center;
+  }
+
+  .hero {
+    padding-top: 60px;
+    gap: 40px;
+  }
+
+  .header {
+    margin-top: 2.5rem;
+  }
+  h2 {
+    font-size: 6vw;
+  }
+}
