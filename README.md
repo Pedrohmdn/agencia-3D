@@ -18,18 +18,18 @@
 
 ### About
 
-**WebHub** is a high-impact landing page for a creative digital agency. The site combines cinematic scroll animations, a 3D diamond model rendered in real-time, and a modern dark aesthetic to deliver a premium user experience.
+**WebHub** is a high-impact landing page for a creative digital agency. The site combines cinematic scroll animations, a 3D diamond model rendered in real-time, and a modern dark aesthetic to deliver a premium user experience. This project is a recreation of the **[Grupo Webhub](https://grupowebhub.com.br/)** website for study purposes.
 
 ### ✨ Features
 
-| Feature | Description |
-|---|---|
-| **Scroll-driven animations** | Smooth, scrub-synced transitions powered by GSAP ScrollTrigger & ScrollSmoother |
-| **3D Diamond model** | Interactive Three.js scene with a `.glb` model, environment map reflections, and continuous rotation |
-| **SplitText effects** | Character-by-character text reveal with blur and stagger animations |
-| **Project showcase** | Gallery that expands and saturates on scroll |
-| **Video backgrounds** | Hero and footer sections with full-bleed looping videos |
-| **Responsive design** | Fluid typography (`clamp`, `vw`) and breakpoints for mobile, tablet, and desktop |
+| Feature                      | Description                                                                                          |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Scroll-driven animations** | Smooth, scrub-synced transitions powered by GSAP ScrollTrigger & ScrollSmoother                      |
+| **3D Diamond model**         | Interactive Three.js scene with a `.glb` model, environment map reflections, and continuous rotation |
+| **SplitText effects**        | Character-by-character text reveal with blur and stagger animations                                  |
+| **Project showcase**         | Gallery that expands and saturates on scroll                                                         |
+| **Video backgrounds**        | Hero and footer sections with full-bleed looping videos                                              |
+| **Responsive design**        | Fluid typography (`clamp`, `vw`) and breakpoints for mobile, tablet, and desktop                     |
 
 ### 🛠️ Tech Stack
 
@@ -68,25 +68,24 @@ agencia-3D/
 
 No build tools required — this is a static site.
 
-
 ---
 
 ## 🇧🇷 Português
 
 ### Sobre
 
-**WebHub** é uma landing page de alto impacto para uma agência digital criativa. O site combina animações cinematográficas baseadas em scroll, um modelo 3D de diamante renderizado em tempo real e uma estética escura moderna para entregar uma experiência premium ao usuário.
+**WebHub** é uma landing page de alto impacto para uma agência digital criativa. O site combina animações cinematográficas baseadas em scroll, um modelo 3D de diamante renderizado em tempo real e uma estética escura moderna para entregar uma experiência premium ao usuário. Esse projeto é uma reciação para estudo do site da **[Grupo Webhub](https://grupowebhub.com.br/)**
 
 ### ✨ Funcionalidades
 
-| Funcionalidade | Descrição |
-|---|---|
-| **Animações por scroll** | Transições suaves e sincronizadas com scrub, usando GSAP ScrollTrigger & ScrollSmoother |
+| Funcionalidade            | Descrição                                                                                           |
+| ------------------------- | --------------------------------------------------------------------------------------------------- |
+| **Animações por scroll**  | Transições suaves e sincronizadas com scrub, usando GSAP ScrollTrigger & ScrollSmoother             |
 | **Modelo 3D de diamante** | Cena interativa com Three.js usando modelo `.glb`, reflexões de mapa de ambiente e rotação contínua |
-| **Efeitos SplitText** | Revelação de texto caractere por caractere com animações de blur e stagger |
-| **Vitrine de projetos** | Galeria que expande e satura conforme o scroll |
-| **Vídeos de fundo** | Seções hero e footer com vídeos em loop de tela cheia |
-| **Design responsivo** | Tipografia fluida (`clamp`, `vw`) e breakpoints para mobile, tablet e desktop |
+| **Efeitos SplitText**     | Revelação de texto caractere por caractere com animações de blur e stagger                          |
+| **Vitrine de projetos**   | Galeria que expande e satura conforme o scroll                                                      |
+| **Vídeos de fundo**       | Seções hero e footer com vídeos em loop de tela cheia                                               |
+| **Design responsivo**     | Tipografia fluida (`clamp`, `vw`) e breakpoints para mobile, tablet e desktop                       |
 
 ### 🛠️ Tecnologias
 
@@ -124,5 +123,3 @@ agencia-3D/
 ### 🚀 Como Executar
 
 Nenhuma ferramenta de build necessária — este é um site estático.
-
-
